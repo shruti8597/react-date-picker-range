@@ -65,7 +65,7 @@ class App extends Component {
         <RangeCalendar
           disabled={disabled}
           sideMenu={sideMenu}
-          onChangeDate={(fromDate, toDate) => alert(date)}
+          onChangeDate={(fromDate, toDate) => alert(fromDate)}
           defaultFromDate={new Date(2019, 7, 12)}
           defaultToDate={new Date()}
           disabledFromPicker={true}

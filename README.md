@@ -4,6 +4,12 @@ A React Date picker for range and single date.
 
 Predefined side options can also be rendered.
 
+![Single Calendar with Predefined Options](Assests/Image5.jpg)
+![Single Caledar](Assests/Image4.jpg)
+
+![Range Calendar With Preddefined Options](Assests/Image3.jpg)
+![Range Calendar](Assests/Image1.jpg)
+
 # NPM Repository
 https://www.npmjs.com/package/react-date-picker-range
 
@@ -24,6 +30,8 @@ Single Calendar
 | disabledPicker | Boolean | false | Disable the date Picker |
 | datePrefix | String | "Date:" | Label for the input date field |
 | doneText | String | 'Done' | Text for the done/ok button |
+|value| String| '' | Value to be displayed in the dropdown |
+|label|String| '' | Dropdwon Label|
 
 Range Calendar
 
@@ -40,6 +48,8 @@ Range Calendar
 | fromDatePrefix | String | "From:" | Label for the from date field |
 | toDatePrefix | String | 'To:'| Label for the to date field |
 | doneText | String | 'Done' | Text for the done/ok button |
+|value| String| '' | Value to be displayed in the dropdown |
+|label|String| '' | Dropdwon Label|
 
 # Usage
 ```
