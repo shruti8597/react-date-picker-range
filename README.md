@@ -40,3 +40,12 @@ Range Calendar
 | fromDatePrefix | String | "From:" | Label for the from date field |
 | toDatePrefix | String | 'To:'| Label for the to date field |
 | doneText | String | 'Done' | Text for the done/ok button |
+
+# Usage
+```
+import SingleCalendar from 'react-date-picker-range';
+import { RangeCalendar } from 'react-date-picker-range';
+
+<SingleCalendar/>
+<RangeCalendar/>
+```
