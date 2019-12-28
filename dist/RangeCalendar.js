@@ -9,7 +9,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _MainCalendar = _interopRequireDefault(require("./MainCalendar"));
 
-var _sidebar = _interopRequireDefault(require("./sidebar"));
+var _sideBar = _interopRequireDefault(require("./sideBar"));
 
 var _DateInput = _interopRequireDefault(require("./DateInput"));
 
@@ -364,7 +364,7 @@ function (_Component) {
       }, _react["default"].createElement("button", {
         className: errorInputs ? 'rcal-done-button rcal-done-button-disabled' : 'rcal-done-button',
         onClick: !errorInputs ? this.closeDropdownAfterSave : null
-      }, this.props.doneText))), sideMenu && sideMenu.length > 0 && _react["default"].createElement(_sidebar["default"], {
+      }, this.props.doneText))), sideMenu && sideMenu.length > 0 && _react["default"].createElement(_sideBar["default"], {
         fromDate: this.state.fromDate,
         toDate: this.state.toDate,
         sideMenu: sideMenu,

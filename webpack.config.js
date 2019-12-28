@@ -21,7 +21,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
-            loader: 'file-loader',
+            loader: 'file-loader?name=[name].[ext]',
           },
         ],
       },
@@ -36,7 +36,7 @@ module.exports = {
       template: './dist/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: 'main.css',
+      filename: 'main.less',
       path: path.join(__dirname, '/dist'),
     }),
   ],

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MainCalendar from './MainCalendar';
-import SideBar from './sidebar';
+import SideBar from './sideBar';
 import DateInput from './DateInput';
 import PropTypes from 'prop-types';
 import moment from 'moment';
