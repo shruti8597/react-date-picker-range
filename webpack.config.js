@@ -18,6 +18,14 @@ module.exports = {
         },
       },
       {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
+      {
         test: /\.(less)$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'],
       },

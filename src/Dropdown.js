@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Single from './SingleCalendar';
 import Range from './RangeCalendar';
+import calendarIcon from './calendar.png';
 
 export default class Dropdown extends Component {
   constructor(props) {
@@ -51,7 +52,7 @@ export default class Dropdown extends Component {
               <div className="rcal-date-value">{this.props.value}</div>
             </div>
             <div className="rcal-date-icon">
-              {openDropdown && this.props.reverseCalendar ? 'r' : 'c'}
+              <img src={calendarIcon} />
             </div>
           </div>
         }
