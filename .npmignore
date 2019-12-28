@@ -2,3 +2,4 @@ node_modules/
 Examples
 .babelrc
 webpack.config.js
+src/

@@ -2,11 +2,12 @@
   "name": "react-date-picker-range",
   "version": "0.0.1",
   "description": "React multilingual Date Picker with single and range picking with predefined side options.",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode production && npm run build-js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-js": "babel src -d dist"
   },
   "author": "Shruti Agrawal (shrutiagrawal915@gmail.com)",
   "keywords": [
@@ -30,6 +31,7 @@
   "homepage": "https://github.com/shruti8597/react-date-picker-range",
   "license": "MIT",
   "devDependencies": {
+    "@babel/cli": "^7.7.7",
     "@babel/core": "^7.7.5",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@babel/preset-env": "^7.7.6",

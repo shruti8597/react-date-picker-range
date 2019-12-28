@@ -20,8 +20,12 @@
 .rcal-date-picker .rcal-picker-header .rcal-header-content .rcal-date-value {
   font-size: 14px;
 }
-.rcal-date-picker .rcal-picker-header .rcal-date-value {
-  font-size: 12px;
+.rcal-date-picker .rcal-picker-header .rcal-date-icon {
+  display: inline-flex;
+}
+.rcal-date-picker .rcal-picker-header .rcal-date-icon img {
+  height: 18px;
+  width: 18px;
 }
 .rcal-date-picker.rcal-picker-open .rcal-picker-header {
   border-bottom: none;
