@@ -36,7 +36,7 @@ module.exports = {
       template: './dist/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: 'main.less',
+      filename: 'main.css',
       path: path.join(__dirname, '/dist'),
     }),
   ],

@@ -12,7 +12,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _Dropdown = _interopRequireDefault(require("./Dropdown"));
 
-require("./main.less");
+require("./main.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
