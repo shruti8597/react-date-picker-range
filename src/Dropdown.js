@@ -1,16 +1,8 @@
 import React, { Component } from 'react';
-import Range from './RangeCalendar';
 import Single from './SingleCalendar';
+import Range from './RangeCalendar';
 
-export default function SingleCalendar(props) {
-  return <Dropdown {...props} calendarType="single" />;
-}
-
-export function RangeCalendar(props) {
-  return <Dropdown {...props} calendarType="range" />;
-}
-
-class Dropdown extends Component {
+export default class Dropdown extends Component {
   constructor(props) {
     super(props);
     this.state = { openDropdown: false };

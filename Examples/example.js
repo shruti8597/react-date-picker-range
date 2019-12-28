@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import SingleCalendar from '../src/Dropdown';
-import { RangeCalendar } from '../src/Dropdown';
+import SingleCalendar from '../src/index';
+import { RangeCalendar } from '../src/index';
+import ReactDOM from 'react-dom';
 
 class App extends Component {
   render() {
@@ -95,4 +96,5 @@ class App extends Component {
     );
   }
 }
-export default App;
+
+ReactDOM.render(<App />, document.getElementById('root'));

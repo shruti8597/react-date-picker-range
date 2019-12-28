@@ -1,6 +1,11 @@
+import React, { Component } from 'react';
+import Dropdown from './Dropdown';
 import './main.less';
-import { RangeCalendar as Range } from './Dropdown';
-import SingleCalendar from './Dropdown';
 
-export const RangeCalendar = Range;
-export default SingleCalendar;
+export default function SingleCalendar(props) {
+  return <Dropdown {...props} calendarType="single" />;
+}
+
+export function RangeCalendar(props) {
+  return <Dropdown {...props} calendarType="range" />;
+}
