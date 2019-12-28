@@ -1,0 +1,40 @@
+{
+  "name": "react-date-picker-range",
+  "version": "0.0.1",
+  "description": "React multilingual Date Picker with single and range picking with predefined side options.",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shruti Agrawal (shrutiagrawal915@gmail.com)",
+  "keywords": [
+    "calendar",
+    "date-picker",
+    "date",
+    "multilingual",
+    "side-bar",
+    "range",
+    "single",
+    "react",
+    "react-dom"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:shruti8597/react-date-picker-range.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shruti8597/react-date-picker-range/issues"
+  },
+  "homepage": "https://github.com/shruti8597/react-date-picker-range",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "*"
+  },
+  "dependencies": {
+    "mini-css-extract-plugin": "^0.9.0",
+    "moment": "^2.24.0",
+    "prop-types": "^15.7.2"
+  }
+}

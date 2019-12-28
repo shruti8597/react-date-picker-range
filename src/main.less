@@ -1,0 +1,360 @@
+.rcal-date-picker {
+  width: 218px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  .rcal-picker-header {
+    border: 1px solid grey;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    .rcal-header-content {
+      width: 100%;
+      margin-right: 3px;
+      .rcal-date-header {
+        font-size: 10px;
+        padding-bottom: 2px;
+        color: grey;
+      }
+      .rcal-date-value {
+        font-size: 14px;
+      }
+    }
+    .rcal-date-value {
+      font-size: 12px;
+    }
+  }
+  &.rcal-picker-open {
+    .rcal-picker-header {
+      border-bottom: none;
+    }
+  }
+  .rcal-picker-body {
+    position: absolute;
+    background-color: white;
+    z-index: 100;
+    display: flex;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+    border: 1px solid grey;
+    border-top: 1px solid #e9e9e9;
+    .rcal-side-bar {
+      font-size: 14px;
+      border-left: 0.5px solid #e9e9e9;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      height: 353.5px;
+      width: 83.5px;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 20px;
+      }
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+
+      .rcal-menu-item {
+        padding: 5px;
+        cursor: pointer;
+        border-bottom: 0.5px solid #e9e9e9;
+        &:hover {
+          background-color: #6bf0de;
+        }
+        &.rcal-menu-selected {
+          background-color: #03dac5;
+        }
+      }
+    }
+    .rcal-calendar-without-sidebar {
+      padding: 10px;
+
+      .rcal-date-input {
+        display: table;
+        .rcal-show-date {
+          display: table-row;
+          label {
+            display: table-cell;
+            font-size: 14px;
+          }
+          input {
+            display: table-cell;
+            text-align: center;
+            margin-left: 10px;
+            width: 100px;
+            height: 20px;
+            outline: none;
+          }
+          .rcal-date-input-selected {
+            outline: 1px solid blue;
+          }
+          .rcal-date-input-error {
+            outline: 1px solid red;
+          }
+          &:not(:first-child) {
+            label,
+            input {
+              margin-top: 5px;
+            }
+          }
+        }
+      }
+      .rcal-calendar {
+        font-size: 12px;
+        margin: 5px 0px;
+        .rcal-calendar-header {
+          display: flex;
+          padding: 5px 0px;
+          .rcal-calendar-header-label {
+            width: 100%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            cursor: default;
+            font-size: 14px;
+            .rcal-header-label-item {
+              background: none;
+              border: none;
+              cursor: pointer;
+              &:hover {
+                color: #6200ee;
+                font-weight: bold;
+              }
+            }
+          }
+          .rcal-calendar-header-prev,
+          .rcal-calendar-header-next {
+            background: none;
+            cursor: pointer;
+            border: 1px solid #e9e9e9;
+            &:hover {
+              background-color: whitesmoke;
+            }
+          }
+        }
+        .rcal-calendar-month {
+          .rcal-calendar-month-row {
+            display: flex;
+            &:not(:first-child) {
+              border-top: 0.5px solid #e9e9e9;
+            }
+            &:last-child {
+              border-bottom: 0.5px solid #e9e9e9;
+            }
+            .rcal-calendar-month-item {
+              height: 59.875px;
+              width: 65px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              &.rcal-calendar-month-selected {
+                .rcal-calendar-month-color-item {
+                  background-color: #03dac5;
+                }
+              }
+              .rcal-calendar-month-color-item {
+                width: 40px;
+                height: 20px;
+                line-height: 20px;
+                text-align: center;
+                cursor: pointer;
+                &:hover {
+                  background-color: #6bf0de;
+                }
+              }
+              &:first-child {
+                margin-left: 0.5px;
+              }
+              &:last-child {
+                margin-right: 0.5px;
+              }
+            }
+          }
+        }
+
+        .rcal-calendar-decade {
+          .rcal-calendar-decade-row {
+            display: flex;
+            &:not(:first-child) {
+              border-top: 0.5px solid #e9e9e9;
+            }
+            &:last-child {
+              border-bottom: 0.5px solid #e9e9e9;
+            }
+            .rcal-calendar-decade-item {
+              height: 59.875px;
+              width: 65px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              &.rcal-calendar-decade-selected {
+                .rcal-calendar-decade-color-item {
+                  background-color: #03dac5;
+                }
+              }
+              .rcal-calendar-decade-color-item {
+                width: 40px;
+                height: 20px;
+                line-height: 20px;
+                text-align: center;
+                cursor: pointer;
+                &:hover {
+                  background-color: #6bf0de;
+                }
+              }
+              &:first-child {
+                margin-left: 0.5px;
+              }
+              &:last-child {
+                margin-right: 0.5px;
+              }
+              &.rcal-calendar-deacde-out-scope {
+                .rcal-calendar-decade-color-item {
+                  color: grey;
+                }
+              }
+            }
+          }
+        }
+
+        .rcal-calendar-days {
+          .rcal-calendar-days-row,
+          .rcal-week-header {
+            display: flex;
+            &:not(:first-child) {
+              border-top: 0.5px solid #e9e9e9;
+            }
+            &:last-child {
+              border-bottom: 0.5px solid #e9e9e9;
+            }
+            .rcal-date-item,
+            .rcal-week-item {
+              text-align: center;
+              width: 28px;
+              line-height: 28px;
+              height: 28px;
+              margin: 3px 0px;
+            }
+            .rcal-date-item {
+              cursor: pointer;
+              &:hover {
+                background-color: #6bf0de;
+                border-radius: 14px;
+                font-size: 15px;
+              }
+            }
+            .rcal-date-selected {
+              background-color: #03dac5;
+              border-radius: 14px;
+              &:hover {
+                background-color: #6bf0de;
+              }
+            }
+            .rcal-date-disabled {
+              cursor: not-allowed;
+              color: gray;
+              &:hover {
+                background: none;
+                border-radius: 0px;
+                font-size: 12px;
+                color: gray;
+              }
+            }
+            .rcal-date-out-scope {
+              color: grey;
+            }
+            .rcal-date-today {
+              border-radius: 14px;
+              border: 1px solid #03dac5;
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box; /* Firefox, other Gecko */
+              box-sizing: border-box;
+              &:hover {
+                border-radius: 14px;
+              }
+            }
+            .rcal-range-selected {
+              background-color: #03dac5;
+              border-radius: 0px;
+              border: none;
+              &:hover {
+                border-radius: 0;
+                background-color: #6bf0de;
+              }
+            }
+            .rcal-date-range-start {
+              background-color: #03dac5;
+              border: none;
+              border-radius: 0;
+              border-top-left-radius: 14px;
+              border-bottom-left-radius: 14px;
+              &:hover {
+                background-color: #6bf0de;
+                border-radius: 0;
+                border-top-left-radius: 14px;
+                border-bottom-left-radius: 14px;
+              }
+            }
+            .rcal-date-range-end {
+              background-color: #03dac5;
+              border-radius: 0;
+              border: none;
+              border-top-right-radius: 14px;
+              border-bottom-right-radius: 14px;
+              &:hover {
+                border-radius: 0;
+                background-color: #6bf0de;
+                border-top-right-radius: 14px;
+                border-bottom-right-radius: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .rcal-footer {
+      margin-top: 10px;
+      display: flex;
+      justify-content: flex-end;
+      .rcal-done-button {
+        border: none;
+        padding: 3px 8px;
+        font-size: 14px;
+        background-color: #3d9970;
+        color: white;
+        cursor: pointer;
+        -webkit-box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+        box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+        &:hover {
+          background-color: #46ad7f;
+        }
+        &:focus,
+        &:active {
+          background-color: #204e3a;
+        }
+        &.rcal-done-button-disabled {
+          background-color: #dddddd;
+          cursor: not-allowed;
+        }
+      }
+    }
+    .rcal-range-calendar {
+      .rcal-side-bar {
+        height: 384.5px;
+      }
+    }
+    .rcal-range-calendar,
+    .rcal-single-calendar {
+      display: flex;
+    }
+  }
+}
